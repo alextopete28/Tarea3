@@ -9,7 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UILabel *lblTesting;
+}
 
+- (IBAction)sldColorChange:(UISlider *)sender;
+
+- (IBAction)sldColorBlue:(UISlider *)sender;
+
+- (IBAction)sldColorGreenChange:(UISlider *)sender;
+
+- (void)fncChangingLabel:(float)Red Blue: (float)Blue Green: (float)Green;
+
+- (IBAction)swVisualizer:(id)sender;
+
+- (IBAction)btnRandom:(UIButton *)sender;
 
 @end
 

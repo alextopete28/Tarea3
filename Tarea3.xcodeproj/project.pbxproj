@@ -101,8 +101,7 @@
 		BAA1B3031F72F740007CAAB8 /* Tarea3 */ = {
 			isa = PBXGroup;
 			children = (
-				BAA1B3071F72F740007CAAB8 /* AppDelegate.h */,
-				BAA1B3081F72F740007CAAB8 /* AppDelegate.m */,
+				BAA1B3371F72F750007CAAB8 /* Delegates */,
 				BAA1B30A1F72F740007CAAB8 /* ViewController.h */,
 				BAA1B30B1F72F740007CAAB8 /* ViewController.m */,
 				BAA1B30D1F72F740007CAAB8 /* Main.storyboard */,
@@ -138,6 +137,15 @@
 				BAA1B32B1F72F740007CAAB8 /* Info.plist */,
 			);
 			path = Tarea3UITests;
+			sourceTree = "<group>";
+		};
+		BAA1B3371F72F750007CAAB8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				BAA1B3071F72F740007CAAB8 /* AppDelegate.h */,
+				BAA1B3081F72F740007CAAB8 /* AppDelegate.m */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
