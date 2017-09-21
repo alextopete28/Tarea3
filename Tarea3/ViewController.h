@@ -11,7 +11,12 @@
 @interface ViewController : UIViewController
 {
     IBOutlet UILabel *lblTesting;
+    IBOutlet UITextField *txtName;
+    IBOutlet UITextField *txtPhone;
+    
+    
 }
+
 
 - (IBAction)sldColorChange:(UISlider *)sender;
 
@@ -24,6 +29,8 @@
 - (IBAction)swVisualizer:(id)sender;
 
 - (IBAction)btnRandom:(UIButton *)sender;
+
+- (IBAction)btnAlert:(UIButton *)sender;
 
 @end
 

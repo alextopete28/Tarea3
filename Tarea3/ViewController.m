@@ -21,15 +21,19 @@
     lblTesting.backgroundColor = [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:1.0];
 }
 
+CAShapeLayer *circleLayer;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    /*CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    circleLayer = [CAShapeLayer layer];
     
-    [circleLayer setPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectMake(50, 50, 100, 100)] CGPath]];
+    [circleLayer setPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 500, 100, 100)] CGPath]];
     
-    [[self.view layer] addSublayer:circleLayer];*/
+    [[self.view layer] addSublayer:circleLayer];
+    
+    
     
     lblTesting.hidden = YES;
     
@@ -49,6 +53,9 @@ float myValue3 = 0;
     lblTesting.text = newVaue;
     
     lblTesting.backgroundColor = [UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0];
+    circleLayer.lineWidth = 3.0;
+    circleLayer.fillColor = [[UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0] CGColor];
+    circleLayer.strokeColor = [[UIColor blackColor] CGColor];
 }
 
 - (IBAction)sldColorGreenChange:(UISlider *)sender {
@@ -62,7 +69,9 @@ float myValue3 = 0;
     lblTesting.text = newVaue;
     
     lblTesting.backgroundColor = [UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0];
-
+    circleLayer.lineWidth = 3.0;
+    circleLayer.fillColor = [[UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0] CGColor];
+    circleLayer.strokeColor = [[UIColor blackColor] CGColor];
 }
 
 - (IBAction)sldColorBlue:(UISlider *)sender {
@@ -76,6 +85,9 @@ float myValue3 = 0;
     lblTesting.text = newVaue;
     
     lblTesting.backgroundColor = [UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0];
+    circleLayer.lineWidth = 3.0;
+    circleLayer.fillColor = [[UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0] CGColor];
+    circleLayer.strokeColor = [[UIColor blackColor] CGColor];
 }
 
 - (IBAction)swVisualizer:(id)sender {
@@ -102,6 +114,18 @@ float myValue3 = 0;
     
     
     lblTesting.backgroundColor = [UIColor colorWithRed:myValue1/255.0 green:myValue2/255.0 blue:myValue3/255.0 alpha:1.0];
+}
+
+
+- (IBAction)btnAlert:(UIButton *)sender {
+    
+    if ([txtName.text isEqualToString:@""]){
+        return;
+    }
+    
+    UIAlertView *helloEarthInputAlert = [[UIAlertView alloc] initWithTitle:@"Llama!" message:[NSString stringWithFormat:@"Nombre: %@, Telefono: %@", txtName.text, txtPhone.text] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    // Display this message.
+    [helloEarthInputAlert show];
 }
 
 - (void)didReceiveMemoryWarning {
